@@ -735,6 +735,16 @@ wheels = [
 ]
 
 [[package]]
+name = "isb-lib"
+version = "0.1.0"
+source = { git = "https://github.com/MSMRo/ISB_LIB.git#5452a9086ee197aa03a519295f2d7b5b2cfe7ea2" }
+dependencies = [
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "sympy" },
+]
+
+[[package]]
 name = "isoduration"
 version = "20.11.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1623,7 +1633,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess", marker = "sys_platform != 'emscripten' and sys_platform != 'win32'" },
+    { name = "ptyprocess" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450, upload-time = "2023-11-25T09:07:26.339Z" }
 wheels = [
@@ -2166,6 +2176,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "ipykernel" },
+    { name = "isb-lib" },
     { name = "jupyter" },
     { name = "matplotlib" },
     { name = "numpy" },
@@ -2176,6 +2187,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "ipykernel", specifier = ">=7.4.0" },
+    { name = "isb-lib", git = "https://github.com/MSMRo/ISB_LIB.git" },
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "matplotlib", specifier = ">=3.11.2" },
     { name = "numpy", specifier = ">=2.5.3" },
